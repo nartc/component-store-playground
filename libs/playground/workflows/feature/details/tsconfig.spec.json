@@ -1,11 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "compilerOptions": {
-    "outDir": "../../../../../dist/out-tsc",
-    "module": "commonjs",
-    "types": ["jest", "node"]
-  },
+  "compilerOptions": { "outDir": "../../../../../dist/out-tsc", "module": "commonjs", "types": ["jest", "node"] },
   "files": ["src/test-setup.ts"],
-  "include": ["**/*.spec.ts", "**/*.d.ts"],
+  "include": ["**/*.spec.ts", "**/*.test.ts", "**/*.d.ts"],
   "exclude": ["src/lib/stores/fixtures.spec.ts"]
 }

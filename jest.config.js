@@ -1,6 +1,8 @@
+const { getJestProjects } = require('@nrwl/jest')
+
 module.exports = {
   projects: [
-    '<rootDir>/apps/playground',
+    ...getJestProjects(),
     '<rootDir>/libs/playground/shared/idb/data-access',
     '<rootDir>/libs/playground/shared/idb/util',
     '<rootDir>/libs/playground/shared/ui/data-access',
@@ -10,15 +12,9 @@ module.exports = {
     '<rootDir>/libs/playground/shared/ui/components/icon',
     '<rootDir>/libs/playground/shared/ui/components/loading',
     '<rootDir>/libs/playground/shared/ui/components/page',
-    '<rootDir>/libs/playground/shell',
-    '<rootDir>/libs/playground/todos/feature',
-    '<rootDir>/libs/playground/todos/data-access',
     '<rootDir>/libs/playground/shared/utils/rx',
     '<rootDir>/libs/playground/shared/utils/types',
     '<rootDir>/libs/playground/shared/ui/components/forms',
-    '<rootDir>/libs/playground/home/feature',
-    '<rootDir>/libs/playground/auth/feature',
-    '<rootDir>/libs/playground/workflows/util',
     '<rootDir>/libs/playground/workflows/workflow-list/feature',
     '<rootDir>/libs/playground/workflows/workflow-details/feature',
     '<rootDir>/libs/playground/workflows/workflow-list/data-access',
@@ -29,16 +25,6 @@ module.exports = {
     '<rootDir>/libs/playground/forms-demo/feature',
     '<rootDir>/libs/playground/forms-demo/forms-demo-detail/feature',
     '<rootDir>/libs/playground/forms-demo/forms-demo-list/feature',
-    '<rootDir>/libs/playground/forms-demo/data-access',
     '<rootDir>/libs/shared/util/custom-component-store',
-    '<rootDir>/libs/playground/fetch-demo/feature/shell',
-    '<rootDir>/libs/playground/fetch-demo/feature/list',
-    '<rootDir>/libs/playground/fetch-demo/feature/client-side-filter',
-    '<rootDir>/libs/shared/ui/sidenav',
-    '<rootDir>/libs/shared/data-access/models',
-    '<rootDir>/libs/playground/fetch-demo/ui/paginator',
-    '<rootDir>/libs/playground/fetch-demo/data-access',
-    '<rootDir>/libs/playground/fetch-demo/feature/detail',
-    '<rootDir>/libs/playground/fetch-demo/ui/pokemon-card',
   ],
 }

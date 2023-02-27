@@ -22,109 +22,35 @@
       }
     }
   },
-  "projects": {
-    "playground": {
-      "tags": ["scope:playground", "type:application"]
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
+  },
+  "defaultProject": "playground",
+  "generators": {
+    "@nrwl/angular:application": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress",
+      "strict": true
     },
-    "playground-auth-feature": {
-      "tags": ["scope:auth", "type:ui"]
+    "@nrwl/angular:library": {
+      "style": "scss",
+      "linter": "eslint",
+      "unitTestRunner": "jest",
+      "strict": true
     },
-    "playground-e2e": {
-      "tags": [],
-      "implicitDependencies": ["playground"]
-    },
-    "playground-fetch-demo-data-access": {
-      "tags": ["scope:fetch-demo", "type:data-access"]
-    },
-    "playground-fetch-demo-feature-client-side-filter": {
-      "tags": ["scope:fetch-demo", "type:ui"]
-    },
-    "playground-fetch-demo-feature-detail": {
-      "tags": ["scope:fetch-demo", "type:ui"]
-    },
-    "playground-fetch-demo-feature-list": {
-      "tags": ["scope:fetch-demo", "type:ui"]
-    },
-    "playground-fetch-demo-feature-shell": {
-      "tags": ["scope:fetch-demo", "type:ui"]
-    },
-    "playground-fetch-demo-ui-paginator": {
-      "tags": ["scope:fetch-demo", "type:ui"]
-    },
-    "playground-fetch-demo-ui-pokemon-card": {
-      "tags": ["scope:fetch-demo", "type:ui"]
-    },
-    "playground-forms-demo-data-access": {
-      "tags": ["scope:forms-demo", "type:data-access"]
-    },
-    "playground-forms-demo-feature-details": {
-      "tags": ["scope:forms-demo", "type:ui"]
-    },
-    "playground-forms-demo-feature-list": {
-      "tags": ["scope:forms-demo", "type:ui"]
-    },
-    "playground-forms-demo-feature-shell": {
-      "tags": ["scope:forms-demo", "type:ui"]
-    },
-    "playground-home-feature": {
-      "tags": ["scope:home", "type:ui"]
-    },
-    "playground-shell": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "playground-todos-data-access": {
-      "tags": ["scope:todos", "type:data-access"]
-    },
-    "playground-todos-feature": {
-      "tags": ["scope:todos", "type:ui"]
-    },
-    "playground-workflows-data-access": {
-      "tags": ["scope:workflows", "type:data-access"]
-    },
-    "playground-workflows-feature-details": {
-      "tags": ["scope:workflows", "type:ui"]
-    },
-    "playground-workflows-feature-list": {
-      "tags": ["scope:workflows", "type:ui"]
-    },
-    "playground-workflows-feature-shell": {
-      "tags": ["scope:workflows", "type:ui"]
-    },
-    "playground-workflows-util": {
-      "tags": ["scope:workflows", "type:util"]
-    },
-    "shared-data-access-idb": {
-      "tags": ["scope:playground", "type:data-access"]
-    },
-    "shared-data-access-models": {
-      "tags": ["scope:playground", "type:data-access"]
-    },
-    "shared-data-access-ui-store": {
-      "tags": ["scope:playground", "type:data-access"]
-    },
-    "shared-ui-footer": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "shared-ui-forms": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "shared-ui-header": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "shared-ui-icon": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "shared-ui-loading": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "shared-ui-page": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "shared-ui-sidenav": {
-      "tags": ["scope:playground", "type:ui"]
-    },
-    "shared-util-rx": {
-      "tags": ["scope:playground", "type:util"]
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   }
 }

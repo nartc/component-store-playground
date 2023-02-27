@@ -94,7 +94,8 @@
             "cname": ""
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:application"]
     },
     "playground-auth-feature": {
       "projectType": "library",
@@ -119,7 +120,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:auth", "type:ui"]
     },
     "playground-e2e": {
       "root": "apps/playground-e2e",
@@ -145,7 +147,9 @@
             "lintFilePatterns": ["apps/playground-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["playground"]
     },
     "playground-fetch-demo-data-access": {
       "projectType": "library",
@@ -170,7 +174,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:fetch-demo", "type:data-access"]
     },
     "playground-fetch-demo-feature-client-side-filter": {
       "projectType": "library",
@@ -195,7 +200,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-feature-detail": {
       "projectType": "library",
@@ -220,7 +226,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-feature-list": {
       "projectType": "library",
@@ -245,7 +252,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-feature-shell": {
       "projectType": "library",
@@ -270,7 +278,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-ui-paginator": {
       "projectType": "library",
@@ -295,7 +304,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-ui-pokemon-card": {
       "projectType": "library",
@@ -320,7 +330,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-forms-demo-data-access": {
       "root": "libs/playground/forms-demo/data-access",
@@ -341,7 +352,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:forms-demo", "type:data-access"]
     },
     "playground-forms-demo-feature-details": {
       "projectType": "library",
@@ -366,7 +378,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:forms-demo", "type:ui"]
     },
     "playground-forms-demo-feature-list": {
       "projectType": "library",
@@ -391,7 +404,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:forms-demo", "type:ui"]
     },
     "playground-forms-demo-feature-shell": {
       "projectType": "library",
@@ -416,7 +430,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:forms-demo", "type:ui"]
     },
     "playground-home-feature": {
       "projectType": "library",
@@ -441,7 +456,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:home", "type:ui"]
     },
     "playground-shell": {
       "projectType": "library",
@@ -463,7 +479,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "playground-todos-data-access": {
       "root": "libs/playground/todos/data-access",
@@ -484,7 +501,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:todos", "type:data-access"]
     },
     "playground-todos-feature": {
       "projectType": "library",
@@ -509,7 +527,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:todos", "type:ui"]
     },
     "playground-workflows-data-access": {
       "root": "libs/playground/workflows/data-access",
@@ -530,7 +549,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:workflows", "type:data-access"]
     },
     "playground-workflows-feature-details": {
       "projectType": "library",
@@ -555,7 +575,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:workflows", "type:ui"]
     },
     "playground-workflows-feature-list": {
       "projectType": "library",
@@ -580,7 +601,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:workflows", "type:ui"]
     },
     "playground-workflows-feature-shell": {
       "projectType": "library",
@@ -605,7 +627,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:workflows", "type:ui"]
     },
     "playground-workflows-util": {
       "root": "libs/playground/workflows/util",
@@ -626,7 +649,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:workflows", "type:util"]
     },
     "shared-data-access-idb": {
       "projectType": "library",
@@ -648,7 +672,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:data-access"]
     },
     "shared-data-access-models": {
       "root": "libs/shared/data-access/models",
@@ -669,7 +694,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:data-access"]
     },
     "shared-data-access-ui-store": {
       "root": "libs/shared/data-access/ui-store",
@@ -690,7 +716,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:data-access"]
     },
     "shared-ui-footer": {
       "projectType": "library",
@@ -712,7 +739,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-forms": {
       "projectType": "library",
@@ -734,7 +762,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-header": {
       "projectType": "library",
@@ -756,7 +785,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-icon": {
       "projectType": "library",
@@ -778,7 +808,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-loading": {
       "projectType": "library",
@@ -800,7 +831,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-page": {
       "projectType": "library",
@@ -822,7 +854,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-sidenav": {
       "projectType": "library",
@@ -844,7 +877,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:ui"]
     },
     "shared-util-rx": {
       "root": "libs/shared/util/rx",
@@ -865,30 +899,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": ["scope:playground", "type:util"]
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/angular",
-    "analytics": false
-  },
-  "schematics": {
-    "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress",
-      "strict": true
-    },
-    "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint",
-      "unitTestRunner": "jest",
-      "strict": true
-    },
-    "@nrwl/angular:component": {
-      "style": "scss"
-    }
-  },
-  "defaultProject": "playground"
+  }
 }
