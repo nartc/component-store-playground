@@ -15,10 +15,11 @@ module.exports = {
     },
   },
   coverageDirectory: '../../../../../coverage/libs/playground/workflows/feature/details',
-  snapshotSerializers: [
-    'jest-preset-angular/build/AngularNoNgAttributesSnapshotSerializer.js',
-    'jest-preset-angular/build/AngularSnapshotSerializer.js',
-    'jest-preset-angular/build/HTMLCommentSerializer.js',
-  ],
+
   testPathIgnorePatterns: ['/node_modules/', 'src/lib/stores/fixtures.spec.ts'],
+  snapshotSerializers: [
+    'jest-preset-angular/build/serializers/no-ng-attributes',
+    'jest-preset-angular/build/serializers/ng-snapshot',
+    'jest-preset-angular/build/serializers/html-comment',
+  ],
 }
