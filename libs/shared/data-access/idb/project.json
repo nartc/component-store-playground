@@ -1,0 +1,24 @@
+{
+  "name": "shared-data-access-idb",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/data-access/idb/src",
+  "prefix": "component-store-playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/data-access/idb/src/**/*.ts", "libs/shared/data-access/idb/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/data-access/idb"],
+      "options": {
+        "jestConfig": "libs/shared/data-access/idb/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:playground", "type:data-access"]
+}

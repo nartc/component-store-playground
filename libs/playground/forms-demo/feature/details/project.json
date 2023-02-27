@@ -1,0 +1,27 @@
+{
+  "name": "playground-forms-demo-feature-details",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/playground/forms-demo/feature/details/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/playground/forms-demo/feature/details/src/**/*.ts",
+          "libs/playground/forms-demo/feature/details/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/playground/forms-demo/feature/details"],
+      "options": {
+        "jestConfig": "libs/playground/forms-demo/feature/details/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:forms-demo", "type:ui"]
+}

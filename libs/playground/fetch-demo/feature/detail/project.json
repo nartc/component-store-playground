@@ -1,0 +1,27 @@
+{
+  "name": "playground-fetch-demo-feature-detail",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/playground/fetch-demo/feature/detail/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/playground/fetch-demo/feature/detail/src/**/*.ts",
+          "libs/playground/fetch-demo/feature/detail/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/playground/fetch-demo/feature/detail"],
+      "options": {
+        "jestConfig": "libs/playground/fetch-demo/feature/detail/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:fetch-demo", "type:ui"]
+}

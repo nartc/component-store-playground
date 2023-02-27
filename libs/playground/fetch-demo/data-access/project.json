@@ -1,0 +1,27 @@
+{
+  "name": "playground-fetch-demo-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/playground/fetch-demo/data-access/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/playground/fetch-demo/data-access/src/**/*.ts",
+          "libs/playground/fetch-demo/data-access/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/playground/fetch-demo/data-access"],
+      "options": {
+        "jestConfig": "libs/playground/fetch-demo/data-access/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:fetch-demo", "type:data-access"]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "shared-ui-page",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/page/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/ui/page/src/**/*.ts", "libs/shared/ui/page/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/page"],
+      "options": {
+        "jestConfig": "libs/shared/ui/page/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:playground", "type:ui"]
+}

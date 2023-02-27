@@ -1,0 +1,27 @@
+{
+  "name": "playground-workflows-feature-list",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/playground/workflows/feature/list/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/playground/workflows/feature/list/src/**/*.ts",
+          "libs/playground/workflows/feature/list/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/playground/workflows/feature/list"],
+      "options": {
+        "jestConfig": "libs/playground/workflows/feature/list/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:workflows", "type:ui"]
+}

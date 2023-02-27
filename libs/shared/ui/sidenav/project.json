@@ -1,0 +1,24 @@
+{
+  "name": "shared-ui-sidenav",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/sidenav/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/ui/sidenav/src/**/*.ts", "libs/shared/ui/sidenav/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/sidenav"],
+      "options": {
+        "jestConfig": "libs/shared/ui/sidenav/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:playground", "type:ui"]
+}

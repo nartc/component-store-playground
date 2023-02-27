@@ -1,0 +1,24 @@
+{
+  "name": "playground-auth-feature",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/playground/auth/feature/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/playground/auth/feature/src/**/*.ts", "libs/playground/auth/feature/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/playground/auth/feature"],
+      "options": {
+        "jestConfig": "libs/playground/auth/feature/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:auth", "type:ui"]
+}

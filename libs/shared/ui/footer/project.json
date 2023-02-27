@@ -1,0 +1,24 @@
+{
+  "name": "shared-ui-footer",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/ui/footer/src",
+  "prefix": "component-store-playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/ui/footer/src/**/*.ts", "libs/shared/ui/footer/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/footer"],
+      "options": {
+        "jestConfig": "libs/shared/ui/footer/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:playground", "type:ui"]
+}

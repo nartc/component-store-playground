@@ -1,0 +1,27 @@
+{
+  "name": "playground-fetch-demo-ui-pokemon-card",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/playground/fetch-demo/ui/pokemon-card/src",
+  "prefix": "playground",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/playground/fetch-demo/ui/pokemon-card/src/**/*.ts",
+          "libs/playground/fetch-demo/ui/pokemon-card/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/playground/fetch-demo/ui/pokemon-card"],
+      "options": {
+        "jestConfig": "libs/playground/fetch-demo/ui/pokemon-card/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["scope:fetch-demo", "type:ui"]
+}
