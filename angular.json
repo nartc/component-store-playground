@@ -80,7 +80,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/apps/playground"],
           "options": {
-            "jestConfig": "apps/playground/jest.config.js",
+            "jestConfig": "apps/playground/jest.config.ts",
             "passWithNoTests": true
           }
         },
@@ -116,7 +116,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/auth/feature"],
           "options": {
-            "jestConfig": "libs/playground/auth/feature/jest.config.js",
+            "jestConfig": "libs/playground/auth/feature/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -170,7 +170,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/fetch-demo/data-access"],
           "options": {
-            "jestConfig": "libs/playground/fetch-demo/data-access/jest.config.js",
+            "jestConfig": "libs/playground/fetch-demo/data-access/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -196,7 +196,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/fetch-demo/feature/client-side-filter"],
           "options": {
-            "jestConfig": "libs/playground/fetch-demo/feature/client-side-filter/jest.config.js",
+            "jestConfig": "libs/playground/fetch-demo/feature/client-side-filter/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -222,7 +222,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/fetch-demo/feature/detail"],
           "options": {
-            "jestConfig": "libs/playground/fetch-demo/feature/detail/jest.config.js",
+            "jestConfig": "libs/playground/fetch-demo/feature/detail/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -248,7 +248,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/fetch-demo/feature/list"],
           "options": {
-            "jestConfig": "libs/playground/fetch-demo/feature/list/jest.config.js",
+            "jestConfig": "libs/playground/fetch-demo/feature/list/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -274,7 +274,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/fetch-demo/feature/shell"],
           "options": {
-            "jestConfig": "libs/playground/fetch-demo/feature/shell/jest.config.js",
+            "jestConfig": "libs/playground/fetch-demo/feature/shell/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -300,7 +300,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/fetch-demo/ui/paginator"],
           "options": {
-            "jestConfig": "libs/playground/fetch-demo/ui/paginator/jest.config.js",
+            "jestConfig": "libs/playground/fetch-demo/ui/paginator/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -326,7 +326,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/fetch-demo/ui/pokemon-card"],
           "options": {
-            "jestConfig": "libs/playground/fetch-demo/ui/pokemon-card/jest.config.js",
+            "jestConfig": "libs/playground/fetch-demo/ui/pokemon-card/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -348,7 +348,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/forms-demo/data-access"],
           "options": {
-            "jestConfig": "libs/playground/forms-demo/data-access/jest.config.js",
+            "jestConfig": "libs/playground/forms-demo/data-access/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -374,7 +374,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/forms-demo/feature/details"],
           "options": {
-            "jestConfig": "libs/playground/forms-demo/feature/details/jest.config.js",
+            "jestConfig": "libs/playground/forms-demo/feature/details/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -400,7 +400,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/forms-demo/feature/list"],
           "options": {
-            "jestConfig": "libs/playground/forms-demo/feature/list/jest.config.js",
+            "jestConfig": "libs/playground/forms-demo/feature/list/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -426,7 +426,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/forms-demo/feature/shell"],
           "options": {
-            "jestConfig": "libs/playground/forms-demo/feature/shell/jest.config.js",
+            "jestConfig": "libs/playground/forms-demo/feature/shell/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -452,7 +452,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/home/feature"],
           "options": {
-            "jestConfig": "libs/playground/home/feature/jest.config.js",
+            "jestConfig": "libs/playground/home/feature/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -475,7 +475,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/shell"],
           "options": {
-            "jestConfig": "libs/playground/shell/jest.config.js",
+            "jestConfig": "libs/playground/shell/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -497,7 +497,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/todos/data-access"],
           "options": {
-            "jestConfig": "libs/playground/todos/data-access/jest.config.js",
+            "jestConfig": "libs/playground/todos/data-access/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -523,7 +523,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/todos/feature"],
           "options": {
-            "jestConfig": "libs/playground/todos/feature/jest.config.js",
+            "jestConfig": "libs/playground/todos/feature/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -545,7 +545,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/workflows/data-access"],
           "options": {
-            "jestConfig": "libs/playground/workflows/data-access/jest.config.js",
+            "jestConfig": "libs/playground/workflows/data-access/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -571,7 +571,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/workflows/feature/details"],
           "options": {
-            "jestConfig": "libs/playground/workflows/feature/details/jest.config.js",
+            "jestConfig": "libs/playground/workflows/feature/details/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -597,7 +597,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/workflows/feature/list"],
           "options": {
-            "jestConfig": "libs/playground/workflows/feature/list/jest.config.js",
+            "jestConfig": "libs/playground/workflows/feature/list/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -623,7 +623,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/workflows/feature/shell"],
           "options": {
-            "jestConfig": "libs/playground/workflows/feature/shell/jest.config.js",
+            "jestConfig": "libs/playground/workflows/feature/shell/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -645,7 +645,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/playground/workflows/util"],
           "options": {
-            "jestConfig": "libs/playground/workflows/util/jest.config.js",
+            "jestConfig": "libs/playground/workflows/util/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -668,7 +668,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/data-access/idb"],
           "options": {
-            "jestConfig": "libs/shared/data-access/idb/jest.config.js",
+            "jestConfig": "libs/shared/data-access/idb/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -690,7 +690,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/data-access/models"],
           "options": {
-            "jestConfig": "libs/shared/data-access/models/jest.config.js",
+            "jestConfig": "libs/shared/data-access/models/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -712,7 +712,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/data-access/ui-store"],
           "options": {
-            "jestConfig": "libs/shared/data-access/ui-store/jest.config.js",
+            "jestConfig": "libs/shared/data-access/ui-store/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -735,7 +735,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui/footer"],
           "options": {
-            "jestConfig": "libs/shared/ui/footer/jest.config.js",
+            "jestConfig": "libs/shared/ui/footer/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -758,7 +758,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui/forms"],
           "options": {
-            "jestConfig": "libs/shared/ui/forms/jest.config.js",
+            "jestConfig": "libs/shared/ui/forms/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -781,7 +781,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui/header"],
           "options": {
-            "jestConfig": "libs/shared/ui/header/jest.config.js",
+            "jestConfig": "libs/shared/ui/header/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -804,7 +804,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui/icon"],
           "options": {
-            "jestConfig": "libs/shared/ui/icon/jest.config.js",
+            "jestConfig": "libs/shared/ui/icon/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -827,7 +827,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui/loading"],
           "options": {
-            "jestConfig": "libs/shared/ui/loading/jest.config.js",
+            "jestConfig": "libs/shared/ui/loading/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -850,7 +850,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui/page"],
           "options": {
-            "jestConfig": "libs/shared/ui/page/jest.config.js",
+            "jestConfig": "libs/shared/ui/page/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -873,7 +873,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/ui/sidenav"],
           "options": {
-            "jestConfig": "libs/shared/ui/sidenav/jest.config.js",
+            "jestConfig": "libs/shared/ui/sidenav/jest.config.ts",
             "passWithNoTests": true
           }
         }
@@ -895,7 +895,7 @@
           "builder": "@nrwl/jest:jest",
           "outputs": ["coverage/libs/shared/util/rx"],
           "options": {
-            "jestConfig": "libs/shared/util/rx/jest.config.js",
+            "jestConfig": "libs/shared/util/rx/jest.config.ts",
             "passWithNoTests": true
           }
         }

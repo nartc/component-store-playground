@@ -1,0 +1,30 @@
+const { getJestProjects } = require('@nrwl/jest')
+
+export default {
+  projects: [
+    ...getJestProjects(),
+    '<rootDir>/libs/playground/shared/idb/data-access',
+    '<rootDir>/libs/playground/shared/idb/util',
+    '<rootDir>/libs/playground/shared/ui/data-access',
+    '<rootDir>/libs/playground/shared/ui/util',
+    '<rootDir>/libs/playground/shared/ui/components/footer',
+    '<rootDir>/libs/playground/shared/ui/components/header',
+    '<rootDir>/libs/playground/shared/ui/components/icon',
+    '<rootDir>/libs/playground/shared/ui/components/loading',
+    '<rootDir>/libs/playground/shared/ui/components/page',
+    '<rootDir>/libs/playground/shared/utils/rx',
+    '<rootDir>/libs/playground/shared/utils/types',
+    '<rootDir>/libs/playground/shared/ui/components/forms',
+    '<rootDir>/libs/playground/workflows/workflow-list/feature',
+    '<rootDir>/libs/playground/workflows/workflow-details/feature',
+    '<rootDir>/libs/playground/workflows/workflow-list/data-access',
+    '<rootDir>/libs/playground/workflows/feature',
+    '<rootDir>/libs/playground/workflows/workflow-details/data-access',
+    '<rootDir>/libs/playground/workflows/workflow-details/ui/components/workflow-group',
+    '<rootDir>/libs/playground/workflows/workflow-details/ui/components/workflow-condition',
+    '<rootDir>/libs/playground/forms-demo/feature',
+    '<rootDir>/libs/playground/forms-demo/forms-demo-detail/feature',
+    '<rootDir>/libs/playground/forms-demo/forms-demo-list/feature',
+    '<rootDir>/libs/shared/util/custom-component-store',
+  ],
+}
