@@ -37,9 +37,15 @@ TBD
  *       type: group,
  *       children: [
  *         {
- *           type: 3,
+ *           id: 3,
  *           parentId: 2,
  *           type: condition
+ *         },
+ *         {
+ *           id: 4,
+ *           parentId: 2,
+ *           type: group,
+ *           children: []
  *         }
  *       ]
  *     }
@@ -56,6 +62,11 @@ TBD
  *     type: group
  *     parentId: 1,
  *     children: [{id: 3, type: condition}]
+ *   },
+ *   4: {
+ *     type: group
+ *     parentId: 2,
+ *     children: []
  *   }
  * }
  *
