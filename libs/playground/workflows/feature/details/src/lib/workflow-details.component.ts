@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
-import { FormGroup } from '@angular/forms'
+import { UntypedFormGroup } from '@angular/forms'
 import { FormField } from '@component-store-playground/shared/ui/forms'
 import { WorkflowDetailsStore } from './stores'
 
@@ -18,7 +18,7 @@ import { WorkflowDetailsStore } from './stores'
 })
 export class WorkflowDetailsComponent {
   readonly vm$ = this.workflowDetailStore.vm$
-  readonly form = new FormGroup({})
+  readonly form = new UntypedFormGroup({})
   readonly fields = [
     FormField.fieldRow(
       [

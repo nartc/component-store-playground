@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
-import { FormControl } from '@angular/forms'
+import { UntypedFormControl } from '@angular/forms'
 import type { PaginatorState } from '@component-store-playground/playground/fetch-demo/ui/paginator'
 import { debounceTime } from 'rxjs/operators'
 import { PokemonClientSideFilterStore } from './stores'
@@ -14,7 +14,7 @@ import { PokemonClientSideFilterStore } from './stores'
 export class ClientSideFilterComponent {
   readonly vm$ = this.pokemonClientSideFilterStore.vm$
 
-  queryControl = new FormControl('')
+  queryControl = new UntypedFormControl('')
 
   constructor(private readonly pokemonClientSideFilterStore: PokemonClientSideFilterStore) {
     pokemonClientSideFilterStore.updateQuery(this.queryControl.valueChanges.pipe(debounceTime(250)))

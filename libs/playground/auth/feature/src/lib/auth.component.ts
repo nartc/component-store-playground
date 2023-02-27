@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
-import { FormGroup } from '@angular/forms'
+import { UntypedFormGroup } from '@angular/forms'
 import { FormlyFieldConfig } from '@ngx-formly/core'
 
 @Component({
@@ -21,7 +21,7 @@ export class AuthComponent {
     'ui-language': 'en',
     'other-languages': ['en'],
   }
-  form = new FormGroup({})
+  form = new UntypedFormGroup({})
   fields: FormlyFieldConfig[] = [
     {
       key: 'email',

@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core'
-import { FormGroup } from '@angular/forms'
+import { UntypedFormGroup } from '@angular/forms'
 import { Todo } from '@component-store-playground/playground/todos/data-access'
 import { FormField } from '@component-store-playground/shared/ui/forms'
 import { debounceTime, pluck } from 'rxjs/operators'
@@ -19,7 +19,7 @@ import { TodosStore } from './stores'
   providers: [TodosStore],
 })
 export class TodosComponent implements OnInit {
-  readonly form = new FormGroup({})
+  readonly form = new UntypedFormGroup({})
   readonly fields: FormField[] = [FormField.input('query', { placeholder: 'Search Todo' })]
   readonly query = this.form.valueChanges.pipe(debounceTime(250), pluck('query'))
 

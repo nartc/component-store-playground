@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, NgZone, ViewChild } from '@angular/core'
-import { FormControl, SelectControlValueAccessor } from '@angular/forms'
+import { UntypedFormControl, SelectControlValueAccessor } from '@angular/forms'
 import { FieldType } from '@ngx-formly/core'
 import { take } from 'rxjs/operators'
 
@@ -78,7 +78,7 @@ import { take } from 'rxjs/operators'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormSelectComponent extends FieldType {
-  formControl!: FormControl
+  formControl!: UntypedFormControl
   defaultOptions = {
     templateOptions: {
       options: [],

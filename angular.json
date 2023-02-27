@@ -2,6 +2,7 @@
   "version": 1,
   "projects": {
     "playground": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "projectType": "application",
       "root": "apps/playground",
       "sourceRoot": "apps/playground/src",
@@ -98,6 +99,7 @@
       "tags": ["scope:playground", "type:application"]
     },
     "playground-auth-feature": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/auth/feature",
       "sourceRoot": "libs/playground/auth/feature/src",
@@ -124,6 +126,7 @@
       "tags": ["scope:auth", "type:ui"]
     },
     "playground-e2e": {
+      "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "root": "apps/playground-e2e",
       "sourceRoot": "apps/playground-e2e/src",
       "projectType": "application",
@@ -152,6 +155,7 @@
       "implicitDependencies": ["playground"]
     },
     "playground-fetch-demo-data-access": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/fetch-demo/data-access",
       "sourceRoot": "libs/playground/fetch-demo/data-access/src",
@@ -178,6 +182,7 @@
       "tags": ["scope:fetch-demo", "type:data-access"]
     },
     "playground-fetch-demo-feature-client-side-filter": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/fetch-demo/feature/client-side-filter",
       "sourceRoot": "libs/playground/fetch-demo/feature/client-side-filter/src",
@@ -204,6 +209,7 @@
       "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-feature-detail": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/fetch-demo/feature/detail",
       "sourceRoot": "libs/playground/fetch-demo/feature/detail/src",
@@ -230,6 +236,7 @@
       "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-feature-list": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/fetch-demo/feature/list",
       "sourceRoot": "libs/playground/fetch-demo/feature/list/src",
@@ -256,6 +263,7 @@
       "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-feature-shell": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/fetch-demo/feature/shell",
       "sourceRoot": "libs/playground/fetch-demo/feature/shell/src",
@@ -282,6 +290,7 @@
       "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-ui-paginator": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/fetch-demo/ui/paginator",
       "sourceRoot": "libs/playground/fetch-demo/ui/paginator/src",
@@ -308,6 +317,7 @@
       "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-fetch-demo-ui-pokemon-card": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/fetch-demo/ui/pokemon-card",
       "sourceRoot": "libs/playground/fetch-demo/ui/pokemon-card/src",
@@ -334,6 +344,7 @@
       "tags": ["scope:fetch-demo", "type:ui"]
     },
     "playground-forms-demo-data-access": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/playground/forms-demo/data-access",
       "sourceRoot": "libs/playground/forms-demo/data-access/src",
       "projectType": "library",
@@ -356,6 +367,7 @@
       "tags": ["scope:forms-demo", "type:data-access"]
     },
     "playground-forms-demo-feature-details": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/forms-demo/feature/details",
       "sourceRoot": "libs/playground/forms-demo/feature/details/src",
@@ -382,6 +394,7 @@
       "tags": ["scope:forms-demo", "type:ui"]
     },
     "playground-forms-demo-feature-list": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/forms-demo/feature/list",
       "sourceRoot": "libs/playground/forms-demo/feature/list/src",
@@ -408,6 +421,7 @@
       "tags": ["scope:forms-demo", "type:ui"]
     },
     "playground-forms-demo-feature-shell": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/forms-demo/feature/shell",
       "sourceRoot": "libs/playground/forms-demo/feature/shell/src",
@@ -434,6 +448,7 @@
       "tags": ["scope:forms-demo", "type:ui"]
     },
     "playground-home-feature": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/home/feature",
       "sourceRoot": "libs/playground/home/feature/src",
@@ -460,6 +475,7 @@
       "tags": ["scope:home", "type:ui"]
     },
     "playground-shell": {
+      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/shell",
       "sourceRoot": "libs/playground/shell/src",
@@ -483,6 +499,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "playground-todos-data-access": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/playground/todos/data-access",
       "sourceRoot": "libs/playground/todos/data-access/src",
       "projectType": "library",
@@ -505,6 +522,7 @@
       "tags": ["scope:todos", "type:data-access"]
     },
     "playground-todos-feature": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/todos/feature",
       "sourceRoot": "libs/playground/todos/feature/src",
@@ -531,6 +549,7 @@
       "tags": ["scope:todos", "type:ui"]
     },
     "playground-workflows-data-access": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/playground/workflows/data-access",
       "sourceRoot": "libs/playground/workflows/data-access/src",
       "projectType": "library",
@@ -553,6 +572,7 @@
       "tags": ["scope:workflows", "type:data-access"]
     },
     "playground-workflows-feature-details": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/workflows/feature/details",
       "sourceRoot": "libs/playground/workflows/feature/details/src",
@@ -579,6 +599,7 @@
       "tags": ["scope:workflows", "type:ui"]
     },
     "playground-workflows-feature-list": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/workflows/feature/list",
       "sourceRoot": "libs/playground/workflows/feature/list/src",
@@ -605,6 +626,7 @@
       "tags": ["scope:workflows", "type:ui"]
     },
     "playground-workflows-feature-shell": {
+      "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/playground/workflows/feature/shell",
       "sourceRoot": "libs/playground/workflows/feature/shell/src",
@@ -631,6 +653,7 @@
       "tags": ["scope:workflows", "type:ui"]
     },
     "playground-workflows-util": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/playground/workflows/util",
       "sourceRoot": "libs/playground/workflows/util/src",
       "projectType": "library",
@@ -653,6 +676,7 @@
       "tags": ["scope:workflows", "type:util"]
     },
     "shared-data-access-idb": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/data-access/idb",
       "sourceRoot": "libs/shared/data-access/idb/src",
@@ -676,6 +700,7 @@
       "tags": ["scope:playground", "type:data-access"]
     },
     "shared-data-access-models": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/shared/data-access/models",
       "sourceRoot": "libs/shared/data-access/models/src",
       "projectType": "library",
@@ -698,6 +723,7 @@
       "tags": ["scope:playground", "type:data-access"]
     },
     "shared-data-access-ui-store": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/shared/data-access/ui-store",
       "sourceRoot": "libs/shared/data-access/ui-store/src",
       "projectType": "library",
@@ -720,6 +746,7 @@
       "tags": ["scope:playground", "type:data-access"]
     },
     "shared-ui-footer": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/ui/footer",
       "sourceRoot": "libs/shared/ui/footer/src",
@@ -743,6 +770,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-forms": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/ui/forms",
       "sourceRoot": "libs/shared/ui/forms/src",
@@ -766,6 +794,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-header": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/ui/header",
       "sourceRoot": "libs/shared/ui/header/src",
@@ -789,6 +818,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-icon": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/ui/icon",
       "sourceRoot": "libs/shared/ui/icon/src",
@@ -812,6 +842,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-loading": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/ui/loading",
       "sourceRoot": "libs/shared/ui/loading/src",
@@ -835,6 +866,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-page": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/ui/page",
       "sourceRoot": "libs/shared/ui/page/src",
@@ -858,6 +890,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "shared-ui-sidenav": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
       "root": "libs/shared/ui/sidenav",
       "sourceRoot": "libs/shared/ui/sidenav/src",
@@ -881,6 +914,7 @@
       "tags": ["scope:playground", "type:ui"]
     },
     "shared-util-rx": {
+      "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "root": "libs/shared/util/rx",
       "sourceRoot": "libs/shared/util/rx/src",
       "projectType": "library",

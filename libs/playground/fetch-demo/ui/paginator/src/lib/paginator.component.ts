@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, HostBinding, Input, Output } from '@angular/core'
-import { FormControl } from '@angular/forms'
+import { UntypedFormControl } from '@angular/forms'
 import { map, tap } from 'rxjs/operators'
 import { PaginatorStore } from './stores'
 
@@ -26,7 +26,7 @@ export class PaginatorComponent {
     }),
   )
 
-  rowsPerPageControl = new FormControl()
+  rowsPerPageControl = new UntypedFormControl()
 
   constructor(private readonly paginatorStore: PaginatorStore) {
     paginatorStore.rowsPerPageChangeEffect(this.rowsPerPageControl.valueChanges.pipe(map(Number)))

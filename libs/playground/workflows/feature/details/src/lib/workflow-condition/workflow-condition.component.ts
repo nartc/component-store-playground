@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core'
-import { FormControl } from '@angular/forms'
+import { UntypedFormControl } from '@angular/forms'
 import { tap } from 'rxjs/operators'
 import { WorkflowConditionStore } from '../stores'
 
@@ -19,7 +19,7 @@ import { WorkflowConditionStore } from '../stores'
 export class WorkflowConditionComponent implements OnInit {
   @Input() conditionId!: string
 
-  allowDeleteControl = new FormControl()
+  allowDeleteControl = new UntypedFormControl()
 
   readonly vm$ = this.workflowConditionStore.vm$.pipe(
     tap(({ condition }) => {

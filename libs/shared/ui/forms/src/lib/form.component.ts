@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core'
-import { FormGroup } from '@angular/forms'
+import { UntypedFormGroup } from '@angular/forms'
 import { FormlyFieldConfig, FormlyFormBuilder, FormlyFormOptions } from '@ngx-formly/core'
 
 @Component({
@@ -11,7 +11,7 @@ import { FormlyFieldConfig, FormlyFormBuilder, FormlyFormOptions } from '@ngx-fo
   `,
 })
 export class FormComponent implements OnInit {
-  @Input() form: FormGroup = new FormGroup({})
+  @Input() form: UntypedFormGroup = new UntypedFormGroup({})
   @Input() fields: FormlyFieldConfig[] = []
   @Input() model?: any = {}
   @Input() options: FormlyFormOptions = {}

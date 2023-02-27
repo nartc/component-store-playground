@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core'
-import { FormGroup } from '@angular/forms'
+import { UntypedFormGroup } from '@angular/forms'
 import { ActivatedRoute } from '@angular/router'
 import { FormsDemo, FormsDemoService } from '@component-store-playground/playground/forms-demo/data-access'
 // @ts-ignore
@@ -9,7 +9,7 @@ import { pluck, switchMap, tap } from 'rxjs/operators'
 
 interface FormsDemoDetailState {
   demo?: FormsDemo
-  form?: FormGroup
+  form?: UntypedFormGroup
   model?: any
 }
 
@@ -28,7 +28,7 @@ export class FormsDemoDetailStore extends ImmerComponentStore<FormsDemoDetailSta
         this.service.find(id).pipe(
           tap((demo) => {
             if (demo) {
-              this.setState({ demo: cloneDeep(demo), form: new FormGroup({}), model: { ...(demo.model || {}) } })
+              this.setState({ demo: cloneDeep(demo), form: new UntypedFormGroup({}), model: { ...(demo.model || {}) } })
             }
           }),
         ),
