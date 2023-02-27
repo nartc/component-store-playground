@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, NgZone, ViewChild } from '@angular/core'
-import { UntypedFormControl, SelectControlValueAccessor } from '@angular/forms'
+import { SelectControlValueAccessor } from '@angular/forms'
 import { FieldType } from '@ngx-formly/core'
 import { take } from 'rxjs/operators'
 
@@ -10,13 +10,13 @@ import { take } from 'rxjs/operators'
       [class]="classNames"
       multiple
       [class.custom-select]="to.customSelect"
-      [formControl]="formControl"
-      [compareWith]="to.compareWith"
+      [formControl]="$any(formControl)"
+      [compareWith]="props.compareWith"
       [class.is-invalid]="showError"
       [formlyAttributes]="field"
     >
-      <ng-container *ngIf="to.options | formlySelectOptions: field | async as opts">
-        <ng-container *ngIf="to._flatOptions; else grouplist">
+      <ng-container *ngIf="props.options | formlySelectOptions : field | async as opts">
+        <ng-container *ngIf="props._flatOptions; else grouplist">
           <ng-container *ngFor="let opt of opts">
             <option [ngValue]="opt.value" [disabled]="opt.disabled">{{ opt.label }}</option>
           </ng-container>
@@ -43,15 +43,15 @@ import { take } from 'rxjs/operators'
       <select
         class="pr-10"
         [class]="classNames"
-        [formControl]="formControl"
-        [compareWith]="to.compareWith"
-        [class.custom-select]="to.customSelect"
+        [formControl]="$any(formControl)"
+        [compareWith]="props.compareWith"
+        [class.cusprops.-select]="to.customSelect"
         [class.is-invalid]="showError"
         [formlyAttributes]="field"
       >
-        <option *ngIf="to.placeholder" [ngValue]="undefined">{{ to.placeholder }}</option>
-        <ng-container *ngIf="to.options | formlySelectOptions: field | async as opts">
-          <ng-container *ngIf="to._flatOptions; else grouplist">
+        <option *ngIf="props.placeholder" [ngValue]="undefined">{{ to.placeholder }}</option>
+        <ng-container *ngIf="props.options | formlySelectOptions : field | async as opts">
+          <ng-container *ngIf="props._flatOptions; else grouplist">
             <ng-container *ngFor="let opt of opts">
               <option [ngValue]="opt.value" [disabled]="opt.disabled">{{ opt.label }}</option>
             </ng-container>
@@ -78,7 +78,6 @@ import { take } from 'rxjs/operators'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormSelectComponent extends FieldType {
-  formControl!: UntypedFormControl
   defaultOptions = {
     templateOptions: {
       options: [],

@@ -1,11 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
-import { UntypedFormControl } from '@angular/forms'
 import { FieldType } from '@ngx-formly/core'
 
 @Component({
   template: `
     <div class="mt-4 space-y-4">
-      <ng-container *ngFor="let option of to.options | formlySelectOptions: field | async; let i = index">
+      <ng-container *ngFor="let option of props.options | formlySelectOptions : field | async; let i = index">
         <div class="flex items-center">
           <input
             type="radio"
@@ -15,7 +14,7 @@ import { FieldType } from '@ngx-formly/core'
             [class.is-invalid]="showError"
             [attr.value]="option.value"
             [value]="option.value"
-            [formControl]="formControl"
+            [formControl]="$any(formControl)"
             [formlyAttributes]="field"
             [attr.disabled]="option.disabled || formControl.disabled ? true : null"
           />
@@ -29,7 +28,6 @@ import { FieldType } from '@ngx-formly/core'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormRadioComponent extends FieldType {
-  formControl!: UntypedFormControl
   defaultOptions = {
     templateOptions: {
       options: [],

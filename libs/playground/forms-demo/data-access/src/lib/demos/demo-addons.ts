@@ -69,7 +69,7 @@ export const demoAddons = {
         addonRight: {
           text: 'Toggle Currency',
           onClick: (to: FormlyTemplateOptions, f: FormlyField) =>
-            (f.model.currency = f.model.currency === 'eur' ? 'usd' : 'eur'),
+            (f.field.model.currency = f.field.model.currency === 'eur' ? 'usd' : 'eur'),
         },
       },
       {

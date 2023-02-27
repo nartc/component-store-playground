@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core'
-import { IndexedDBModule } from 'ng-indexed-db'
+import { NgxIndexedDBModule } from 'ngx-indexed-db'
 
 @NgModule({
-  imports: [IndexedDBModule.forRoot([{ name: 'default', stores: [{ name: 'todos' }, { name: 'workflows' }] }])],
+  imports: [
+    NgxIndexedDBModule.forRoot({
+      name: 'default',
+      version: 1,
+      objectStoresMeta: [
+        { store: 'todos', storeConfig: { keyPath: 'id', autoIncrement: true }, storeSchema: [] },
+        { store: 'workflows', storeConfig: { keyPath: 'id', autoIncrement: true }, storeSchema: [] },
+      ],
+    }),
+  ],
 })
 export class SharedDataAccessIdbModule {}

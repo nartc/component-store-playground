@@ -1,5 +1,4 @@
 import { Component } from '@angular/core'
-import { UntypedFormControl } from '@angular/forms'
 import { FieldType } from '@ngx-formly/core'
 
 @Component({
@@ -8,17 +7,15 @@ import { FieldType } from '@ngx-formly/core'
       class="shadow-sm dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:ring-purple-500 focus:border-purple-500 border-gray-300 rounded-md block w-full sm:text-sm"
       [ngClass]="classNames"
       [type]="type"
-      [formControl]="formControl"
+      [formControl]="$any(formControl)"
       [formlyAttributes]="field"
       [class.is-invalid]="showError"
     />
   `,
 })
 export class FormInputComponent extends FieldType {
-  formControl!: UntypedFormControl
-
   get type(): string {
-    return this.to.type || 'text'
+    return this.props.type || 'text'
   }
 
   get classNames(): string {

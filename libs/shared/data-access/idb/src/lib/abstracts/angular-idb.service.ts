@@ -1,10 +1,7 @@
-import { Inject } from '@angular/core'
 import { ApiResponse, RxUtil } from '@component-store-playground/shared/util/rx'
-import { IndexedDB as AngularIdb } from 'ng-indexed-db'
+import { NgxIndexedDBService } from 'ngx-indexed-db'
 import { Observable } from 'rxjs'
 import { delay } from 'rxjs/operators'
-
-export { AngularIdb }
 
 export interface AngularIdbServiceOptions {
   delay?: number
@@ -15,12 +12,12 @@ export const defaultAngularIdbServiceOptions: AngularIdbServiceOptions = {
 }
 
 export abstract class AngularIdbService<T> {
-  private readonly db: AngularIdb
+  private readonly db: NgxIndexedDBService
   private readonly table: string
   private readonly options: AngularIdbServiceOptions
 
   protected constructor(
-    @Inject(AngularIdb) db: AngularIdb,
+    db: NgxIndexedDBService,
     table: string,
     options: AngularIdbServiceOptions = defaultAngularIdbServiceOptions,
   ) {
@@ -35,15 +32,15 @@ export abstract class AngularIdbService<T> {
 
   create(item: T): Observable<T> {
     const id = new Date().getTime().toString()
-    return this.db.create(this.table, { id, ...item }).pipe(delay(this.delay))
+    return this.db.add(this.table, { id, ...item }).pipe(delay(this.delay))
   }
 
   items(prevItems: T[] = []): Observable<ApiResponse<T[]>> {
-    return this.db.list<T>(this.table).pipe(delay(this.delay)).pipe(RxUtil.toApiResponse(prevItems))
+    return this.db.getAll<T>(this.table).pipe(delay(this.delay)).pipe(RxUtil.toApiResponse(prevItems))
   }
 
   item(id: string): Observable<ApiResponse<T>> {
-    return this.db.get<T>(this.table, id).pipe(delay(this.delay), RxUtil.toApiResponse())
+    return this.db.getByID<T>(this.table, id).pipe(delay(this.delay), RxUtil.toApiResponse())
   }
 
   update(id: string, item: T): Observable<T> {
@@ -51,6 +48,6 @@ export abstract class AngularIdbService<T> {
   }
 
   delete(id: string): Observable<boolean> {
-    return this.db.delete(this.table, id).pipe(delay(this.delay))
+    return this.db.deleteByKey(this.table, id).pipe(delay(this.delay))
   }
 }

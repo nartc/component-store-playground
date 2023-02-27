@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core'
-import { SvgIconRegistry, SvgIconsModule } from '@ngneat/svg-icon'
+import { SvgIconRegistry, SvgIconComponent } from '@ngneat/svg-icon'
 import { uiIconMap } from './constants'
 import { IconComponent } from './icon.component'
 
 @NgModule({
-  imports: [SvgIconsModule.forRoot()],
+  imports: [SvgIconComponent],
   declarations: [IconComponent],
   exports: [IconComponent],
 })

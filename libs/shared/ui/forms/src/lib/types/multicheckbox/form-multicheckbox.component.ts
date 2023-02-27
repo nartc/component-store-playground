@@ -1,12 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core'
-import { UntypedFormControl } from '@angular/forms'
 import { FieldType } from '@ngx-formly/core'
 
 @Component({
   template: `
     <div class="mt-4 sm:mt-0 sm:col-span-2">
       <div class="max-w-lg space-y-4">
-        <ng-container *ngFor="let option of to.options | formlySelectOptions: field | async; let i = index">
+        <ng-container *ngFor="let option of props.options | formlySelectOptions : field | async; let i = index">
           <div class="relative flex items-start">
             <div class="flex items-center h-5">
               <input
@@ -32,7 +31,6 @@ import { FieldType } from '@ngx-formly/core'
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FormMulticheckboxComponent extends FieldType {
-  formControl!: UntypedFormControl
   defaultOptions = {
     templateOptions: {
       options: [],
@@ -40,7 +38,7 @@ export class FormMulticheckboxComponent extends FieldType {
   }
 
   onChange(value: any, target: any): void {
-    if (this.to.type === 'array') {
+    if (this.props.type === 'array') {
       this.formControl.patchValue(
         target.checked
           ? [...(this.formControl.value || []), value]
@@ -55,6 +53,6 @@ export class FormMulticheckboxComponent extends FieldType {
   isChecked(option: any): boolean {
     const value = this.formControl.value
 
-    return value && (this.to.type === 'array' ? value.indexOf(option.value) !== -1 : value[option.value])
+    return value && (this.props.type === 'array' ? value.indexOf(option.value) !== -1 : value[option.value])
   }
 }

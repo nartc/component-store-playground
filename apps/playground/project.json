@@ -6,20 +6,17 @@
   "prefix": "playground",
   "targets": {
     "build": {
-      "executor": "@angular-builders/custom-webpack:browser",
+      "executor": "@nrwl/angular:webpack-browser",
       "options": {
         "outputPath": "dist/apps/playground",
         "index": "apps/playground/src/index.html",
         "main": "apps/playground/src/main.ts",
-        "polyfills": "apps/playground/src/polyfills.ts",
+        "polyfills": ["zone.js"],
         "tsConfig": "apps/playground/tsconfig.app.json",
         "aot": true,
         "assets": ["apps/playground/src/favicon.ico", "apps/playground/src/assets"],
         "styles": ["apps/playground/src/styles.scss"],
-        "scripts": [],
-        "customWebpackConfig": {
-          "path": "webpack.config.js"
-        }
+        "scripts": []
       },
       "configurations": {
         "production": {
@@ -52,7 +49,7 @@
       }
     },
     "serve": {
-      "executor": "@angular-builders/custom-webpack:dev-server",
+      "executor": "@nrwl/angular:webpack-dev-server",
       "options": {
         "browserTarget": "playground:build"
       },

@@ -2,10 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   prefix: '',
-  purge: {
-    enabled: process.argv.join(' ').includes('production'),
-    content: ['./apps/**/*.{html,ts}', './libs/**/*.{html,ts}'],
-  },
+  content: ['./apps/**/*.{html,ts}', './libs/**/*.{html,ts}'],
   darkMode: 'class',
   theme: {
     colors,
@@ -28,5 +25,5 @@ module.exports = {
       pointerEvents: ['disabled'],
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/custom-forms')],
+  plugins: [require('@tailwindcss/forms')],
 }
