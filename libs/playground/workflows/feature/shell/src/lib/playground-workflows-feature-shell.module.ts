@@ -10,10 +10,8 @@ import { SharedDataAccessIdbModule } from '@component-store-playground/shared/da
     RouterModule.forChild([
       {
         path: '',
-        loadChildren: () =>
-          import('@component-store-playground/playground/workflows/feature/list').then(
-            (m) => m.PlaygroundWorkflowsFeatureListModule,
-          ),
+        loadComponent: () =>
+          import('@component-store-playground/playground/workflows/feature/list').then((m) => m.WorkflowListComponent),
       },
       {
         path: ':workflowId',
