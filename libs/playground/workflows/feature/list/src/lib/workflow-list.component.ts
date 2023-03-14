@@ -82,13 +82,13 @@ import { WorkflowListStore } from './stores'
 })
 export class WorkflowListComponent implements OnInit {
   readonly #workflowListStore = inject(WorkflowListStore)
-  protected readonly vm$ = this.#workflowListStore.vm$
+  readonly vm$ = this.#workflowListStore.vm$
 
   ngOnInit(): void {
     this.#workflowListStore.loadWorkflowsEffect()
   }
 
-  protected addWorkflow(task: HTMLInputElement): void {
+  addWorkflow(task: HTMLInputElement): void {
     this.#workflowListStore.addWorkflowEffect({
       name: task.value,
       group: {
@@ -101,7 +101,7 @@ export class WorkflowListComponent implements OnInit {
     task.value = ''
   }
 
-  protected deleteWorkflow(workflow: Workflow): void {
+  deleteWorkflow(workflow: Workflow): void {
     this.#workflowListStore.deleteWorkflowEffect(workflow)
   }
 }
