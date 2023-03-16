@@ -1,22 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing'
-
+import { createComponentFactory } from '@ngneat/spectator/jest'
 import { NoWorkflowsComponent } from './no-workflows.component'
 
 describe('NoWorkflowsComponent', () => {
-  let component: NoWorkflowsComponent
-  let fixture: ComponentFixture<NoWorkflowsComponent>
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [NoWorkflowsComponent],
-    }).compileComponents()
-
-    fixture = TestBed.createComponent(NoWorkflowsComponent)
-    component = fixture.componentInstance
-    fixture.detectChanges()
-  })
+  const createComponent = createComponentFactory({ component: NoWorkflowsComponent })
 
   it('should create', () => {
-    expect(component).toBeTruthy()
+    const spectator = createComponent()
+
+    expect(spectator).toBeTruthy()
   })
 })
