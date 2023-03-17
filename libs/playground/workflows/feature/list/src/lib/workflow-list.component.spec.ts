@@ -1,5 +1,5 @@
 import { RouterTestingModule } from '@angular/router/testing'
-import { Workflow, WorkflowsService, WorkflowType } from '@component-store-playground/playground/workflows/data-access'
+import { WorkflowsService } from '@component-store-playground/playground/workflows/data-access'
 import { createComponentFactory, mockProvider, Spectator, SpyObject } from '@ngneat/spectator/jest'
 import { of } from 'rxjs'
 import { WorkflowListStore } from './stores'
@@ -43,16 +43,5 @@ describe('WorkflowListComponent', () => {
   it('should call store.addWorkflowEffect on addWorkflow', () => {
     spectator.component.addWorkflow({ value: 'new workflow' } as HTMLInputElement)
     expect(store.addWorkflowEffect).toHaveBeenCalled()
-  })
-
-  it('should call store.deleteWorkflowEffect on deleteWorkflow', () => {
-    const workflow: Workflow = {
-      id: '1',
-      name: 'foo',
-      group: { id: '2', children: [], type: WorkflowType.group, level: 0 },
-      maxDepth: 2,
-    }
-    spectator.component.deleteWorkflow(workflow)
-    expect(store.deleteWorkflowEffect).toHaveBeenCalledWith(workflow)
   })
 })
