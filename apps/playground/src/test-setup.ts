@@ -1,3 +1,6 @@
+import 'zone.js'
+import 'zone.js/testing'
+
 import 'jest-preset-angular'
 
 import { getTestBed } from '@angular/core/testing'
