@@ -7,12 +7,12 @@ import {
 import { ApiResponse } from '@component-store-playground/shared/util/rx'
 import { subscribeSpyTo } from '@hirez_io/observer-spy'
 import { createServiceFactory, SpectatorService, SpyObject } from '@ngneat/spectator/jest'
-import { of } from 'rxjs'
+import { Observable, of } from 'rxjs'
 import { WorkflowListStore } from './workflow-list.store'
 
 describe('WorkflowListStore', () => {
   let spectator: SpectatorService<WorkflowListStore>
-  let vm$: typeof WorkflowListStore.prototype['vm$']
+  let vm$: (typeof WorkflowListStore.prototype)['vm$']
 
   const getVm = (
     partial: Partial<{ workflows: Workflow[]; isEmpty: boolean; isLoading: boolean; saving: boolean }> = {},
@@ -49,18 +49,18 @@ describe('WorkflowListStore', () => {
   describe('effects', () => {
     let service: SpyObject<WorkflowsService>
 
-    const getMockedItems = (data: Workflow[], prev: Workflow[] = []) =>
-      of<ApiResponse<Workflow[]>>(
+    const getMockedItems = (data: Workflow[], prev: Workflow[] = []): Observable<ApiResponse<Workflow[]>> =>
+      of(
         {
           data: prev,
           status: 'loading',
           error: '',
-        },
+        } satisfies ApiResponse<Workflow[]>,
         {
           data,
           status: 'success',
           error: '',
-        },
+        } satisfies ApiResponse<Workflow[]>,
       )
 
     beforeEach(() => {

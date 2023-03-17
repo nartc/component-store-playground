@@ -1,1 +1,1 @@
-export * from './lib/playground-workflows-feature-list.module'
+export * from './lib/workflow-list.component'
