@@ -18,7 +18,7 @@ import { WorkflowListStore } from '../../stores'
     <p class="hover:text-blue-dark">
       {{ workflow.name }}
     </p>
-    <button class="text-gray-200 hover:text-red-600" (click)="$event.stopPropagation(); deleteWorkflow(workflow)">
+    <button class="text-gray-200 hover:text-red-600" (click)="$event.stopPropagation(); deleteWorkflow()">
       <playground-icon icon="trash" size="sm" />
     </button>
   `,
@@ -30,7 +30,7 @@ export class WorkflowDisplayComponent {
 
   @Input() readonly workflow!: Workflow
 
-  deleteWorkflow(workflow: Workflow): void {
-    this.#workflowListStore.deleteWorkflowEffect(workflow)
+  deleteWorkflow(): void {
+    this.#workflowListStore.deleteWorkflowEffect(this.workflow)
   }
 }
